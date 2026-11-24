@@ -1,0 +1,16 @@
+node_modules/
+dist/
+data/*.db
+data/*.db-*
+logs/*.log
+.env
+*.log
+.DS_Store
+coverage/
+.nyc_output/
+desktop/node_modules/
+web/node_modules/
+web/dist/
+*.tgz
+.idea/
+.vscode/

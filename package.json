@@ -1,0 +1,25 @@
+{
+  "name": "autonomous-bot-platform",
+  "version": "0.1.0",
+  "description": "Fully Autonomous Modular Bot Platform - native programmable bots with optional AI",
+  "type": "module",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "tsx src/index.ts",
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js --coverage",
+    "test:unit": "node --experimental-vm-modules node_modules/jest/bin/jest.js tests/unit",
+    "test:integration": "node --experimental-vm-modules node_modules/jest/bin/jest.js tests/integration",
+    "test:e2e": "node --experimental-vm-modules node_modules/jest/bin/jest.js tests/end-to-end",
+    "test:stress": "node --experimental-vm-modules node_modules/jest/bin/jest.js tests/stress",
+    "db:migrate": "tsx scripts/migrate.ts",
+    "platform": "tsx src/index.ts",
+    "mcp-server": "tsx src/mcp/server/index.ts"
+  },
+  "keywords": ["bot", "autonomous", "workflow", "mcp", "agent"],
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  }
+}
