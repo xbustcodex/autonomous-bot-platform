@@ -72,6 +72,10 @@ export class Supervisor extends EventEmitter {
     return this.emergencyStop;
   }
 
+  getDataDir(): string {
+    return this.dataDir;
+  }
+
   getFactory(): BotFactory {
     return this.factory;
   }
