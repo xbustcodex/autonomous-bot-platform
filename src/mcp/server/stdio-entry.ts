@@ -3,6 +3,17 @@
  *
  * Usage:
  *   MCP_AUTH_DISABLED=true npx tsx src/mcp/server/stdio-entry.ts
+ *
+ * Claude Desktop config example:
+ * {
+ *   "mcpServers": {
+ *     "autonomous-bots": {
+ *       "command": "npx",
+ *       "args": ["tsx", "/path/to/src/mcp/server/stdio-entry.ts"],
+ *       "env": { "DATA_DIR": "/path/to/data", "MCP_AUTH_DISABLED": "true" }
+ *     }
+ *   }
+ * }
  */
 
 import 'dotenv/config';
