@@ -76,3 +76,27 @@ registerTool(
   },
   async (input) => ({ echoed: input })
 );
+
+registerTool(
+  {
+    name: 'mcp.call',
+    description: 'Call a tool on a registered external MCP server',
+    inputSchema: {
+      type: 'object',
+      properties: {
+        server: { type: 'string' },
+        tool: { type: 'string' },
+        args: { type: 'object' },
+      },
+      required: ['server', 'tool'],
+    },
+    permissions: ['network'],
+    timeoutMs: 30000,
+    handler: 'builtin',
+  },
+  async (input) => {
+    const { botCallExternalMcp } = await import('../mcp/client/index.js');
+    const { server, tool, args } = input as { server: string; tool: string; args?: Record<string, unknown> };
+    return botCallExternalMcp(server, tool, args ?? {});
+  }
+);
