@@ -15,11 +15,31 @@
     "test:stress": "node --experimental-vm-modules node_modules/jest/bin/jest.js tests/stress",
     "db:migrate": "tsx scripts/migrate.ts",
     "platform": "tsx src/index.ts",
-    "mcp-server": "tsx src/mcp/server/index.ts"
+    "mcp-server": "tsx src/mcp/server/stdio-entry.ts",
+    "mcp-stdio": "tsx src/mcp/server/stdio-entry.ts"
   },
   "keywords": ["bot", "autonomous", "workflow", "mcp", "agent"],
   "license": "MIT",
   "engines": {
     "node": ">=20"
+  },
+  "dependencies": {
+    "better-sqlite3": "^11.7.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "eventemitter3": "^5.0.1",
+    "express": "^4.21.0",
+    "uuid": "^10.0.0",
+    "ws": "^8.18.0",
+    "zod": "^3.23.8",
+    "@modelcontextprotocol/sdk": "^1.12.0"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/node": "^22.0.0",
+    "@types/ws": "^8.5.12",
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0"
   }
 }
