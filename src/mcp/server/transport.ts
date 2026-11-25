@@ -18,7 +18,6 @@ function textResult(data: unknown) {
   };
 }
 
-/** Attach MCP routes to the main Express app (Streamable HTTP–style JSON-RPC). */
 export function attachMcpHttp(
   app: Express,
   supervisor: Supervisor,
@@ -160,7 +159,6 @@ export function attachMcpHttp(
   });
 }
 
-/** Start MCP over stdio using the official SDK when available. */
 export async function startMcpStdio(supervisor: Supervisor): Promise<void> {
   const handler = createMcpHandler(supervisor);
 
